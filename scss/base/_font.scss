@@ -1,0 +1,95 @@
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background: $value !important;
+	}
+}
+
+@each $color, $value in $colors {
+	.text-#{$color} {
+		color: $value !important;
+	}
+}
+
+@each $color, $value in $colors {
+	a.text-hover-#{$color} {
+		&:hover,
+		&:focus {
+			color: $value !important;
+			text-decoration: none !important;
+		}
+	}
+}
+
+@each $name, $value in $headings-sizes-lg {
+	@include media-breakpoint-up(lg) {
+		#{$name},
+		.#{$name} {
+			font-size: $value;
+		}
+	}
+}
+
+@each $name, $value in $font-size-base-lg {
+	@include media-breakpoint-up(lg) {
+		#{$name} {
+			font-size: $value;
+		}
+	}
+}
+
+@each $name, $value in $line-height-base-lg {
+	@include media-breakpoint-up(lg) {
+		#{$name} {
+			line-height: $value;
+		}
+	}
+}
+
+@each $name, $value in $headings-line-height {
+	#{$name} {
+		line-height: $value;
+	}
+}
+
+.container {
+	@each $breakpoint, $gutter in $grid-gutter-widths {
+		@include media-breakpoint-up($breakpoint) {
+			@include make-container($gutter);
+		}
+	}
+}
+
+.row {
+	@each $breakpoint, $gutter in $grid-gutter-widths {
+		@include media-breakpoint-up($breakpoint) {
+			@include make-row($gutter);
+		}
+	}
+
+	.row > .col,
+	.row > [class*='col-'] {
+		@each $breakpoint, $gutter in $grid-gutter-widths {
+			@include media-breakpoint-up($breakpoint) {
+				@include make-col-ready($gutter);
+			}
+		}
+	}
+}
+
+@font-face {
+	font-family: 'Galaxie Copernicus';
+	src: url('../fonts/GalaxieCopernicus-Book.eot');
+	src: url('../fonts/GalaxieCopernicus-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/GalaxieCopernicus-Book.woff2') format('woff2'), url('../fonts/GalaxieCopernicus-Book.woff') format('woff'), url('../fonts/GalaxieCopernicus-Book.ttf') format('truetype'), url('../fonts/GalaxieCopernicus-Book.svg#GalaxieCopernicus-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-Regular.eot');
+	src: url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Inter-Regular.woff2') format('woff2'), url('../fonts/Inter-Regular.woff') format('woff'), url('../fonts/Inter-Regular.ttf') format('truetype'), url('../fonts/Inter-Regular.svg#Inter-Regular') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

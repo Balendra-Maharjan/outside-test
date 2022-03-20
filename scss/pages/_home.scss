@@ -1,0 +1,109 @@
+.banner {
+	.banner-content {
+		min-height: 497px;
+		z-index: 1;
+
+		@include media('screen', '>=desktop') {
+			min-height: 695px;
+		}
+	}
+
+	.bg-holder {
+		@include media('screen', '>=tablet') {
+			position: absolute;
+			right: 0;
+			z-index: -1;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50%;
+			max-width: 1311px;
+			text-align: right;
+		}
+
+		@include media('screen', '>=widescreen') {
+			width: 69%;
+		}
+	}
+}
+
+.deposit {
+	.icon-holder {
+		@include media('screen', '>=desktop') {
+			flex-basis: 60px;
+			max-width: 60px;
+		}
+	}
+}
+
+.contact {
+	font-size: 2rem;
+	line-height: 1.5;
+	@include media('screen', '>=desktop') {
+		font-size: 3rem;
+		line-height: 1.6667;
+	}
+}
+
+.machines {
+	h2 {
+		letter-spacing: -0.01em;
+		word-break: break-word;
+	}
+}
+
+.machines,
+.branch {
+	@include media('screen', '<tablet') {
+		.icon-holder {
+			flex-basis: 50px;
+			max-width: 50px;
+		}
+	}
+}
+
+.resources {
+	@include media('screen', '<tablet') {
+		.icon-holder {
+			flex-basis: 33px;
+			max-width: 33px;
+		}
+
+		.blog {
+			padding-bottom: 1.5rem;
+		}
+	}
+
+	.h3 {
+		@include media('screen', '<tablet') {
+			font-size: 2rem;
+		}
+	}
+
+	.bg-sky-blue {
+		border-radius: 4px;
+		box-shadow: 0 3px 10px rgba(21, 68, 107, 0.3);
+		overflow: hidden;
+	}
+
+	.blog {
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	.icon-holder {
+		@include media('screen', '>=desktop') {
+			flex-basis: 49px;
+			max-width: 49px;
+			height: 59px;
+		}
+	}
+}
+
+.build {
+	.icon-holder {
+		@include media('screen', '>=desktop') {
+			flex-basis: 60px;
+			max-width: 60px;
+		}
+	}
+}

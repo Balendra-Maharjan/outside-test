@@ -1,0 +1,153 @@
+.header {
+	z-index: 5;
+	
+	.logo {
+		max-width: 164px;
+		flex-basis: 164px;
+
+		@include media('screen', '>=tablet') {
+			max-width: 202px;
+			flex-basis: 202px;
+		}
+	}
+
+	nav {
+		@include media('screen', '>=tablet') {
+			flex: 1;
+		}
+
+		font-size: 1.6rem;
+		font-weight: 600;
+
+		.navigation {
+			a{
+				text-decoration: none;
+				&:before {
+					position: absolute;
+					content: '';
+					bottom: -9px;
+					left: 0;
+					right: 0;
+					height: 4px;
+					width: 0;
+					background: $danger;
+					margin: 0 auto;
+					@include animate(width);
+
+					@include media('screen', '>=tablet') {
+						top: -25px;
+						bottom:auto;
+					}
+				}
+
+				&:hover,
+				&:focus {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+
+			.active {
+				a {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.navigation{
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 100%;
+	background:$white;
+	transform:translateX(200%);
+	z-index: 10;
+	@include animate(transform);
+	overflow:auto;
+	justify-content: flex-end;
+	height: 100vh;
+
+	@include media('screen', '>=tablet') {
+		position: static;
+		transform:none;
+		overflow:visible;
+		height:auto;
+		background:transparent;
+		padding: 0 0 0 15px;
+	}
+
+	.nav-active & {
+
+		@include media('screen', '<tablet') {
+			transform:translateX(0);
+		}
+	}
+
+}
+
+.nav-opener {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	right: 4px;
+	z-index:10;
+	@include animate(box-shadow);
+
+	@include media('screen', '>=tablet') {
+		display: none;
+	}
+
+	.nav-active & {
+		span {
+			right: 100%;
+		}
+
+		&:before,
+		&:after {
+			transform: rotate(45deg);
+			top: 38%;
+			left: -5%;
+			right: 20%;
+			transition-delay: 0.2s;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	span,
+	&:before,
+	&:after {
+		background: $danger;
+		position: absolute;
+		top: 45%;
+		left: -7px;
+		right: 20%;
+		height: 4px;
+		margin-top: -1px;
+		transition: all .2s linear;
+	}
+
+	span {
+		left: 8%;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		top: 15%;
+	}
+
+	&:after {
+		top: 73%;
+		left: 33%;
+	}
+}

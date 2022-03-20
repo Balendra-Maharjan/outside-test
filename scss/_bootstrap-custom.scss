@@ -1,0 +1,300 @@
+// custom variables and override bootstrap variables
+
+$body-bg: #f2efee;
+
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #3c3c3c;
+$gray-900: #212529;
+$black: #3c3c3c;
+$beige: #d7c3ae;
+
+$blue: #003a92;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #ea2630;
+$orange: #fd7e14;
+$yellow: #fadd00;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$colors: ();
+$colors: map-merge(
+	(
+		'blue': $blue,
+		'indigo': $indigo,
+		'purple': $purple,
+		'pink': $pink,
+		'red': $red,
+		'orange': $orange,
+		'yellow': $yellow,
+		'green': $green,
+		'teal': $teal,
+		'cyan': $cyan,
+		'white': $white,
+		'gray': $gray-600,
+		'gray-dark': $gray-800,
+		'beige': $beige,
+	),
+	$colors
+);
+
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
+$beige: $beige;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+	(
+		'primary': $primary,
+		'secondary': $secondary,
+		'success': $success,
+		'info': $info,
+		'warning': $warning,
+		'danger': $danger,
+		'light': $light,
+		'dark': $dark,
+	),
+	$theme-colors
+);
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.1,
+		),
+		2: (
+			$spacer * 0.2,
+		),
+		3: (
+			$spacer * 0.3,
+		),
+		4: (
+			$spacer * 0.4,
+		),
+		5: (
+			$spacer * 0.5,
+		),
+		6: (
+			$spacer * 0.6,
+		),
+		7: (
+			$spacer * 0.7,
+		),
+		8: (
+			$spacer * 0.8,
+		),
+		9: (
+			$spacer * 0.9,
+		),
+		10: (
+			$spacer * 1,
+		),
+		13: (
+			$spacer * 1.3,
+		),
+		15: (
+			$spacer * 1.5,
+		),
+		17: (
+			$spacer * 1.7,
+		),
+		18: (
+			$spacer * 1.8,
+		),
+		20: (
+			$spacer * 2,
+		),
+		24: (
+			$spacer * 2.4,
+		),
+		25: (
+			$spacer * 2.5,
+		),
+		27: (
+			$spacer * 2.7,
+		),
+		30: (
+			$spacer * 3,
+		),
+		35: (
+			$spacer * 3.5,
+		),
+		40: (
+			$spacer * 4,
+		),
+		44: (
+			$spacer * 4.4,
+		),
+		45: (
+			$spacer * 4.5,
+		),
+		50: (
+			$spacer * 5,
+		),
+		55: (
+			$spacer * 5.5,
+		),
+		60: (
+			$spacer * 6,
+		),
+		65: (
+			$spacer * 6.5,
+		),
+		70: (
+			$spacer * 7,
+		),
+		75: (
+			$spacer * 7.5,
+		),
+		80: (
+			$spacer * 8,
+		),
+		85: (
+			$spacer * 8.5,
+		),
+		90: (
+			$spacer * 9,
+		),
+		95: (
+			$spacer * 9.5,
+		),
+		93: (
+			$spacer * 9.3,
+		),
+		100: (
+			$spacer * 10,
+		),
+		105: (
+			$spacer * 10.5,
+		),
+		110: (
+			$spacer * 11,
+		),
+		120: (
+			$spacer * 12,
+		),
+		140: (
+			$spacer * 14,
+		),
+		145: (
+			$spacer * 14.5,
+		),
+		150: (
+			$spacer * 15,
+		),
+		160: (
+			$spacer * 16,
+		),
+		170: (
+			$spacer * 17,
+		),
+		230: (
+			$spacer * 23,
+		),
+		242: (
+			$spacer * 24.2,
+		),
+	),
+	$spacers
+);
+
+$base-min-width: 375px;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 10px;
+
+$font-size-base: 1.4rem;
+$font-family-base: 'Galaxie Copernicus', $font-family-sans-serif;
+$font-family-base-sec: 'Inter', $font-family-sans-serif;
+$line-height-base: 1.6667;
+$body-color: $black;
+
+$font-size-base-lg: (
+	'body': 2rem,
+);
+
+$line-height-base-lg: (
+	'body': 1.4,
+);
+
+// heading
+$h1-font-size: 3.2rem;
+$h2-font-size: 2.4rem;
+$h3-font-size: 1.6rem;
+$headings-font-weight: 700;
+
+$headings-sizes-lg: (
+	'h1': 6.4rem,
+	'h2': 4.4rem,
+	'h3': 2.4rem,
+);
+
+$headings-line-height: 1.25;
+
+h2,
+.h2 {
+	line-height: 1.333;
+	margin-bottom: $headings-margin-bottom;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	color: $headings-color;
+}
+
+h3,
+.h3 {
+	line-height: 1.5;
+}
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1480px,
+);
+
+$grid-gutter-widths: (
+	xs: 32px,
+	sm: 48px,
+	md: 60px,
+	lg: 88px,
+	xl: 120px,
+);
+
+$grid-gutter-width: map-get($grid-gutter-widths, md);
+
+$card-border-width: 0;
+$card-border-radius: 4px;
+
+$btn-font-size: 2rem;
+$btn-line-height: 1;
+$btn-font-weight: 600;
+$btn-border-width: 2px;
+$btn-padding-y: 1.1rem;
+$btn-padding-x: 3rem;
+
+.card-body {
+	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
+	// as much space as possible, ensuring footers are aligned to the bottom.
+	padding: $card-spacer-y $card-spacer-x;
+}
+
+$card-spacer-x: 4.5rem;
+$card-spacer-y: 3.7rem;
