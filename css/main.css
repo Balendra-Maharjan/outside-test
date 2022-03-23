@@ -540,7 +540,7 @@ a.text-hover-purp:focus {
 }
 
 .fixed-position .white-bg-extd:before {
-	left: 0;
+	left: 0 !important;
 }
 
 .footer {
