@@ -37,14 +37,6 @@
 	}
 }
 
-@each $name, $value in $line-height-base-lg {
-	@include media-breakpoint-up(lg) {
-		#{$name} {
-			line-height: $value;
-		}
-	}
-}
-
 @each $name, $value in $headings-line-height {
 	#{$name} {
 		line-height: $value;

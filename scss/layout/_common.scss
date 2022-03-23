@@ -1,0 +1,184 @@
+.btn {
+	font-size: 1.4rem;
+	position: relative;
+
+	@include media('screen', '>=desktop') {
+		font-size: 1.8rem;
+	}
+
+	&.btn-lined {
+		border-color: #c4c4c4;
+		padding: 0 0 0 12px;
+
+		@include media('screen', '>=widescreen') {
+			padding: 0 0 0 18px;
+		}
+
+		&:hover {
+			border-color: $primary;
+			color: $primary;
+
+			&:after {
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+
+		&:after {
+			position: relative;
+			content: $icon-Right-arrow;
+			font-family: icomoon;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 39px;
+			height: 40px;
+			margin-left: 12px;
+			color: $black;
+			top: 0;
+			bottom: 0;
+			border-left: 1px solid #c4c4c4;
+			@include animate(color border-color);
+
+			@include media('screen', '>=widescreen') {
+				width: 68px;
+				height: 61px;
+				margin-left: 26px;
+			}
+		}
+	}
+
+	&.arrow {
+		padding-left: 0;
+		padding-right: 25px;
+
+		&:hover {
+			color: $primary;
+
+			&:after {
+				color: $primary;
+			}
+
+			&:before {
+				height: 0;
+			}
+		}
+		&:after {
+			position: relative;
+			content: $icon-Right-arrow;
+			font-family: icomoon;
+			top: 0;
+			right: -15px;
+			font-size: 10px;
+			@include animate(color);
+
+			@include media('screen', '>=desktop') {
+				right: -22px;
+				font-size: 13px;
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			background: #c4c4c4;
+			bottom: -10px;
+			left: 0;
+			right: 0;
+			height: 1px;
+			z-index: 1;
+			@include animate(height);
+		}
+	}
+}
+
+.red-bg-extd {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		background-color: $dark-red;
+		top: 0;
+		left: 0;
+		right: 16px;
+		bottom: 0;
+		z-index: -1;
+
+		@include media('screen', '>=desktop') {
+			right: 60px;
+		}
+	}
+}
+
+.js-tab-hidden {
+	display: block !important;
+	left: -9999px !important;
+	position: absolute !important;
+	top: -9999px !important;
+}
+
+.social-icons {
+	font-size: 15px;
+}
+
+.white-bg-extd {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		left: 16px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: $white;
+		z-index: -1;
+	}
+}
+
+.sec-title {
+	color: $primary;
+	text-transform: uppercase;
+	font-family: $font-family-base-sec;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.07em;
+	margin-bottom: 1.6rem;
+
+	@include media('screen', '>=desktop') {
+		font-size: 2.4rem;
+		margin-bottom: 3.2rem;
+	}
+}
+
+.bg-beige-extd {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: $beige;
+		z-index: -1;
+	}
+}
+
+.container-large {
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 32px;
+	padding-right: 32px;
+
+	@include media('screen', '>=desktop') {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+
+a {
+	@include animate(color border-color);
+}
